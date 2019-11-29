@@ -1,0 +1,130 @@
+/* style.css */
+/*  
+  main color: #348e4c;
+*/
+/* 초기화 */
+* {
+  margin: 0; padding: 0;
+}
+a { text-decoration: none;}
+ul { list-style-type: none;}
+body{ 
+  font-size: 100%;
+  font-family: 'Noto Sans KR', sans-serif;
+}
+html, body {
+  height: 100%;
+}
+#page_wrap{
+  /* border: 2px solid green; */
+  min-width: 780px;
+  height: 100%;
+  background: #ccc;
+}
+
+#main_header {
+  position: absolute;
+  /* 헤더가 위에 표시*/
+  z-index: 10;
+  background: rgba(255,255,255, 1);
+  width: 100%;
+  min-width: 780px;
+  height: 72px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.3);
+}
+#main_header > h1 {
+  width: 150px; height: 29px;
+  /* background: #fff; */
+  margin-left: 20px;
+  margin-top: 20px;
+  background-image: url("../images/logo_small.png");
+  text-indent: -9999px;
+}
+#main_gnb {
+  position: absolute;
+  right: 20px; top: 24px;
+}
+#main_gnb ul li {
+  display: inline-block;
+  margin-left: 1.5em;
+  margin-right: 1.5em;
+}
+#main_gnb ul li a {
+  color: #444;
+  font-weight: bold;
+}
+#main_gnb ul li a:hover {
+  color: #348e4c;
+}
+
+#main {
+  position: relative;
+  height: 100%;
+  background: #666;
+  overflow: hidden;
+}
+#main > .col {
+  width: 25%;
+  height: 100%;
+  float: left;
+  /* outline: 1px solid red; */
+  position: relative;
+  text-align: center;
+}
+#main > .col > .title {
+  position: absolute;
+  width: 100%;
+  /* calc 위치 계산 */
+  top: calc(50% - 30px);
+  /* outline: 1px solid green; */
+  background: rgba(0,0,0,0.6);
+  padding: 0.5em 0;
+}
+#main > .col > .title > h2 {
+  font-size: 32px;
+  color: #fff;
+}
+#main > .col > .title > p {
+  font-size: 1em;
+  color: #fff;
+}
+
+/* 하단 버튼 */
+#main > .col > .cta {
+  position: absolute;
+  width: 120px; 
+  height: 35px;
+  line-height: 35px;
+  bottom: 15%;
+  left: 50%;
+  /* box-sizing: border-box; */
+  display: inline-block;
+  color: #fff;
+  border: 1px solid #fff;
+  margin-left: -60px;
+  background-color: rgba(0,0,0,0.6);
+}
+#main > .col > .cta:hover {
+  background: #fff;
+  color: #000;
+}
+
+/* 배경 */
+#main .col:nth-child(1) {
+  background-image: url("../images/beijing.jpg");
+  background-size: cover;
+}
+#main .col:nth-child(2) {
+  background-image: url("../images/osaka.jpg");
+  background-size: cover;
+  background-position: center;
+}
+#main .col:nth-child(3) {
+  background-image: url("../images/hongkong.jpg");
+  background-size: cover;
+  background-position: center;
+}
+#main .col:nth-child(4) {
+  background-image: url("../images/bangkok.jpg");
+  background-size: cover;
+}
